@@ -58,12 +58,12 @@ App.Views.Body = Backbone.View.extend({
                 model: "Email"
                 },
             success: function(responseText) {
-                console.log(responseText);
+                $(this.el).html(responseText);
             }
             });
 
 		// Write HTML
-		$(this.el).html(template());
+		//$(this.el).html(template());
 
 
 		return this;
