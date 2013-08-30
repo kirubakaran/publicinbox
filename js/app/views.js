@@ -53,6 +53,14 @@ App.Views.Body = Backbone.View.extend({
 		// Template
 		var template = App.Utils.template('t_body');
 
+        Api.search({
+            data: {
+                model: "Email"
+                },
+            }).then(function(responseText) {
+                console.log(responseText);
+                });
+
 		// Write HTML
 		$(this.el).html(template());
 
